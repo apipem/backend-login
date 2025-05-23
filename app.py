@@ -19,11 +19,11 @@ app.config['SECRET_KEY'] = 'apilab'
 
 # Usuario de prueba
 users = {
-    "user1": {"password": "123", "cedula": "123"},
-    "user2": {"password": "123", "cedula": "123"},
-    "user3": {"password": "123", "cedula": "123"},
-    "1": {"password": "1", "cedula": "123"},
-    "2": {"password": "22", "cedula": "123"},
+    "user1": {"password": "123", "cedula": "1"},
+    "user2": {"password": "123", "cedula": "2"},
+    "user3": {"password": "123", "cedula": "3"},
+    "1": {"password": "123", "cedula": "4"},
+    "2": {"password": "123", "cedula": "5"},
 }
 
 @app.route('/login', methods=['POST'])
