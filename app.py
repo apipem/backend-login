@@ -22,7 +22,7 @@ def login():
             'cedula': users[username]['cedula'],
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
         }, app.config['SECRET_KEY'], algorithm='HS256')
-        return jsonify({'token': token})
+        return jsonify({'token': token if isinstance(token, str) else token.decode('utf-8')})
     
     return jsonify({'message': 'Credenciales incorrectas'}), 401
 
